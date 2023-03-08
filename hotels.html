@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels in France</title>
+    <script src="hotel.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<style>
+    body{
+        background-image: linear-gradient(rgba(255, 232, 232, 0.566),rgba(255, 232, 232, 0.566)),url("PARIS1.jpg");
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    h1{
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-align: center;
+    }
+    h2{
+        font-family: Georgia, 'Times New Roman', Times, serif;    
+    }
+    .w3-bar{
+        width: 2000px;
+    }
+    .w3-bar a{
+        margin-left: 130px;
+    }
+    .w3-bar .w3-dropdown-click{
+        margin-left: 130px;
+    }
+    .container1 {
+        position: relative;
+        margin: 10px auto;
+        max-width: 1000px;
+    }
+    .container1 h1{
+        text-align: left;
+    }
+    .container1 img {
+        vertical-align: middle;
+        width: 600px;
+        height: 500px;
+    }
+
+    .container1 .content1 {
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0); /* Fallback color */
+        background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+        color: #f1f1f1;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .container2 {
+        position: relative;
+        margin: 10px auto;
+        max-width: 1000px;
+    }
+    .container2 h1{
+        text-align: left;
+    }
+    .container2 img {
+        vertical-align: middle;
+        width: 600px;
+        height: 500px;
+    }
+
+    .container2 .content2 {
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0); /* Fallback color */
+        background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+        color: #f1f1f1;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .container3 {
+        position: relative;
+        margin: 10px auto;
+        max-width: 1000px;
+    }
+    .container3 h1{
+        text-align: left;
+    }
+    .container3 img {
+        vertical-align: middle;
+        width: 600px;
+        height: 500px;
+    }
+
+    .container3 .content3 {
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0); /* Fallback color */
+        background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+        color: #f1f1f1;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .container4 {
+        position: relative;
+        margin: 10px auto;
+        max-width: 1000px;
+    }
+    .container4 h1{
+        text-align: left;
+    }
+    .container4 img {
+        vertical-align: middle;
+        width: 600px;
+        height: 500px;
+    }
+
+    .container4 .content4 {
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0); /* Fallback color */
+        background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+        color: #f1f1f1;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .container5 {
+        position: relative;
+        margin: 10px auto;
+        max-width: 1000px;
+    }
+    .container5 h1{
+        text-align: left;
+    }
+    .container5 img {
+        vertical-align: middle;
+        width: 600px;
+        height: 500px;
+    }
+
+    .container5 .content5 {
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0); /* Fallback color */
+        background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+        color: #f1f1f1;
+        width: 100%;
+        padding: 20px;
+    }
+    </style>
+<body>
+    <div class="w3-bar">
+        <a href="index.html" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black">Home</a>
+        <div class="w3-dropdown-click">
+          <button class="w3-button" onclick="myFunction()">Food <i class="fa fa-caret-down"></i></button>
+          <div id="demo" class="w3-dropdown-content w3-bar-block w3-card">
+            <a href="food.html" class="w3-bar-item w3-button">French Foods</a>
+            <a href="recipe.html" class="w3-bar-item w3-button">Recipe</a>
+          </div>
+        </div>
+        <a href="places.html" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black">Attraction</a>
+        <a href="hotels.html" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black">Hotel</a>
+        <a href="info.html" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black">More Info</a>
+    </div>
+
+    <h1>Top 5 Hotels to stay in France</h1>
+
+    <div class="container1">
+        <img src="lutetia1.jpg" alt="Notebook" style="width:100%;">
+        <div class="content1">
+          <h1>Hotel Lutetia</h1>
+          <p>Hotel Lutetia is an iconic luxury hotel situated in the Saint-Germain-des-Prés area. Located on the Left Bank of the River Seine, it is a 5-minute walk from le Bon Marché Department Store and 2 km from the Louvre Museum.</p>
+        </div>
+    </div>
+    <br><br><br>
+    <div class="container2">
+        <img src="ledan.jpg" alt="Notebook" style="width:100%;">
+        <div class="content2">
+          <h1>Le Damantin Hôtel & Spa</h1>
+          <p>Set in the 8th arr. District of Paris, Le Damantin Hôtel & Spa offers free access to the spa & wellness centre, which includes an indoor pool and a sauna. Built in 19th century, the property is within 1.5 km of Orangerie Museum. The accommodation features a 24-hour front desk and free WiFi is available.</p>
+        </div>
+    </div>
+    <br><br><br>
+    <div class="container3">
+        <img src="continental.jpg" alt="Notebook" style="width:100%;">
+        <div class="content3">
+          <h1>InterContinental Paris Le Grand, an IHG Hotel</h1>
+          <p>Intercontinental Paris Le Grand is located just 30 m from the Opéra Garnier and Opera Metro Station. It offers 2 restaurants and a health club with sauna and massage treatments.
+        </div>
+    </div>
+    <br><br><br>
+    <div class="container4">
+        <img src="manolita.jpg" alt="Notebook" style="width:100%;">
+        <div class="content4">
+          <h1>Manolita Paris</h1>
+          <p>Situated 500 m from Pigalle Metro Station, Manolita Paris offers 5-star accommodation in Paris and has a bar. This 5-star hotel offers room service, a 24-hour front desk and free WiFi. The property is allergy-free and is located 600 m from La Cigale Concert Hall.</p>
+        </div>
+    </div>
+    <br><br><br>
+    <div class="container5">
+        <img src="adore.jpg" alt="Notebook" style="width:100%;">
+        <div class="content5">
+          <h1>Paris j'Adore Hotel & Spa</h1>
+          <p>Set in Paris, Paris j'Adore Hotel & Spa offers 5-star accommodation with a restaurant and a bar. Featuring a terrace, the 5-star hotel has air-conditioned rooms with free WiFi, each with a private bathroom. The accommodation offers room service, a concierge service and luggage storage for guests.</p>
+        </div>
+    </div>
+</body>
+</html>

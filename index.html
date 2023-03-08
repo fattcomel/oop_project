@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Home</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style type="text/css">
+      body{
+            background-image: linear-gradient(rgba(255, 232, 232, 0.566),rgba(255, 232, 232, 0.566)),url("PARIS1.jpg");
+            font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+      h1{
+          font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+      h2{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        
+      }
+      .w3-bar{
+        width: 2000px;
+      }
+      .w3-bar a{
+        margin-left: 130px;
+      }
+      .w3-bar .w3-dropdown-click{
+        margin-left: 130px;
+      }
+      #header{
+        width: 1500px;
+      }
+      #header h4{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      }
+      .banner{
+        width: 1500px;
+        margin:70px auto 0;
+        text-align: center;
+        margin-left: -150px;
+      }
+      .banner a{
+        width: 150px;
+        text-decoration: none;
+        display: inline-block;
+        margin: 0 10px;
+        padding: 12px 0;
+        color: black;
+        border: .5px solid black ;
+        position: relative;
+        z-index:1;
+        transition: color 0.5s;
+        text-align: center;
+      }
+      .banner a span{
+        width:0;
+        height:100%;
+        position: absolute;
+        top:0;
+        left:0;
+        background: black;
+        z-index: -1; 
+        transition: 0.5s;
+        text-align: center;
+      }
+      .banner a:hover span{
+        width: 100%;
+        text-align: center;
+      } 
+      .banner a:hover{
+        color:white ;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="w3-bar">
+      <a href="index.html" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black">Home</a>
+      <div class="w3-dropdown-click">
+        <button class="w3-button" onclick="myFunction()">Food <i class="fa fa-caret-down"></i></button>
+        <div id="demo" class="w3-dropdown-content w3-bar-block w3-card">
+          <a href="food.html" class="w3-bar-item w3-button">French Foods</a>
+          <a href="recipe.html" class="w3-bar-item w3-button">Recipe</a>
+        </div>
+      </div>
+      <a href="places.html" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black">Attraction</a>
+      <a href="hotels.html" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black">Hotel</a>
+      <a href="info.html" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black">More Info</a>
+  </div>
+    <br><br>
+    <div id="header">
+      <h1>Bonjour</h1>
+      <h4>Welcome to France , the very well-known country. France is the largest country by land area in EUROPE<br>
+      The capital and by far the most important city of France is Paris, one of the world’s preeminent cultural and commercial centres.<br> A majestic city known as the ville lumière, or “city of light,” Paris has often been remade, most famously in the mid-19th century<br> under the command of Georges-Eugène, Baron Haussman, who was committed to Napoleon III’s vision of a modern city free of<br> the choleric swamps and congested alleys of old, with broad avenues and a regular plan.</h4>
+    </div>
+    <div class="banner">
+      <a href="places.html"><span></span>ATTRACTION</a>
+      <a href="food.html"><span></span>FOOD</a>
+  </div>
+  </body>
+</html>

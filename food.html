@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>French Food</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style type="text/css">
+      body{
+            background-image: linear-gradient(rgba(255, 232, 232, 0.566),rgba(255, 232, 232, 0.566)),url("PARIS1.jpg");
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        h1{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+       .w3-bar{
+            width: 2000px;
+        }
+        .w3-bar a{
+            margin-left: 130px;
+        }
+        .w3-bar .w3-dropdown-click{
+            margin-left: 130px;
+        }
+      #food-container{
+        text-align: center;
+      }
+      #food-container h2{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+      #food-container img{
+        width: 350px;
+        height: 350px;
+      }
+      #creme{
+        text-align: center;
+      }
+      #creme h2{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+      #food-container h1{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+      #creme img{
+        width: 350px;
+        height: 350px;
+      }
+    </style>
+</head>
+<body>
+  <div class="w3-bar">
+    <a href="index.html" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black">Home</a>
+    <div class="w3-dropdown-click">
+      <button class="w3-button" onclick="myFunction()">Food <i class="fa fa-caret-down"></i></button>
+      <div id="demo" class="w3-dropdown-content w3-bar-block w3-card">
+        <a href="food.html" class="w3-bar-item w3-button">French Foods</a>
+        <a href="recipe.html" class="w3-bar-item w3-button">Recipe</a>
+      </div>
+    </div>
+    <a href="places.html" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black">Attraction</a>
+    <a href="hotels.html" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black">Hotel</a>
+    <a href="info.html" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black">More Info</a>
+</div>
+
+  <h1>French Foods</h1>
+  <div id="food-container"></div>
+  
+  <br><br>
+    <script>
+      const foodContainer = document.getElementById('food-container');
+  
+      fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=french')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(data => {
+          const meals = data.meals;
+  
+          meals.forEach(meal => {
+            const name = meal.strMeal;
+            const image = meal.strMealThumb;
+
+            const foodCard = document.createElement('div');
+            const foodName = document.createElement('h2');
+            const foodImage = document.createElement('img');
+  
+            foodName.textContent = name;
+            foodImage.src = image;
+  
+            foodCard.appendChild(foodName);
+            foodCard.appendChild(foodImage);
+            foodContainer.appendChild(foodCard);
+          });
+        })
+        .catch(error => console.error('Error:', error));
+    </script>
+
+    <div id="creme">
+      <h2>White Chocolate Creme Brulee</h2>
+      <div id="recipe">
+        <img id="recipe-img" src="" alt="White Chocolate Creme Brulee">
+      </div>
+    </div>
+</body>
+</html>

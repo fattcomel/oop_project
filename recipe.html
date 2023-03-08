@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style type="text/css">
+      body{
+            background-image: linear-gradient(rgba(255, 232, 232, 0.566),rgba(255, 232, 232, 0.566)),url("PARIS1.jpg");
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        h1{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+       .w3-bar{
+            width: 2000px;
+        }
+        .w3-bar a{
+            margin-left: 130px;
+        }
+        .w3-bar .w3-dropdown-click{
+            margin-left: 130px;
+        }
+      #recipe1{
+        background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75));
+        color: white;
+        max-width: 2000px;
+      }
+      #omelet img{
+        margin-left: 100px;
+        max-width: 100px;
+        height: 100px;
+      }
+      #recipe2{
+        background: linear-gradient(rgba(217, 216, 216, 0.797),rgba(217,216,216,0.797));
+        color: black;
+        max-width: 2000px;
+      }
+      #soup img{
+        margin-left: 100px;
+        max-width: 100px;
+        height: 100px;
+      }
+      #recipe3{
+        background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75));
+        color: white;
+        max-width: 2000px;
+      }
+      #lentils img{
+        margin-left: 100px;
+        max-width: 100px;
+        height: 100px;
+      }
+      #recipe4{
+        background: linear-gradient(rgba(217, 216, 216, 0.797),rgba(217,216,216,0.797));
+        color: black;
+        max-width: 2000px;
+      }
+      #potato img{
+        margin-left: 100px;
+        max-width: 100px;
+        height: 100px;
+      }
+      #recipe5{
+        background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75));
+        color: white;
+        max-width: 2000px;
+      }
+      #brulee img{
+        margin-left: 100px;
+        max-width: 100px;
+        height: 100px;
+      }
+    </style>
+</head>
+<body>
+  <div class="w3-bar">
+    <a href="index.html" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black">Home</a>
+    <div class="w3-dropdown-click">
+      <button class="w3-button" onclick="myFunction()">Food <i class="fa fa-caret-down"></i></button>
+      <div id="demo" class="w3-dropdown-content w3-bar-block w3-card">
+        <a href="food.html" class="w3-bar-item w3-button">French Foods</a>
+        <a href="recipe.html" class="w3-bar-item w3-button">Recipe</a>
+      </div>
+    </div>
+    <a href="places.html" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black">Attraction</a>
+    <a href="hotels.html" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black">Hotel</a>
+    <a href="info.html" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black">More Info</a>
+</div>
+
+    <h1 align="center">RECIPES & INSTRUCTIONS</h1>
+    <div id="recipe1">
+      <h1>French Omelet Recipe</h1>
+      <div id="omelet"></div>
+    </div>
+    <br><br>
+
+    <div id="recipe2">
+      <h1>French Onion Soup Recipe</h1>
+      <div id="soup"></div>
+
+    </div>
+    <br><br>
+    <div id="recipe3">
+      <h1>French Lentils With Garlic and Thyme Recipe</h1>
+      <div id="lentils"></div>
+
+    </div>
+
+    <br><br>
+    <div id="recipe4">
+      <h1>French Onion Chicken with Roasted Carrots & Mashed Potatoes Recipe</h1>
+      <div id="potato"></div>
+    </div>
+
+    <div id="recipe5">
+      <h1>White Chocolate Creme Brulee Recipe</h1>
+      <div id="brulee"></div>
+    </div>
+</body>
+</html>

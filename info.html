@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Info</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style type="text/css">
+      body{
+            background-image: linear-gradient(rgba(255, 232, 232, 0.566),rgba(255, 232, 232, 0.566)),url("PARIS1.jpg");
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        h1{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+       .w3-bar{
+            width: 2000px;
+        }
+        .w3-bar a{
+            margin-left: 130px;
+        }
+        .w3-bar .w3-dropdown-click{
+            margin-left: 130px;
+        }
+        #weather1{
+          margin-left: 70px;
+        }
+        #time{
+          margin-left: 70px;
+        }
+        #currency{
+          margin-left: 70px;
+        }
+    </style>
+</head>
+  <body>  
+    <div class="w3-bar">
+      <a href="index.html" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black">Home</a>
+      <div class="w3-dropdown-click">
+        <button class="w3-button" onclick="myFunction()">Food <i class="fa fa-caret-down"></i></button>
+        <div id="demo" class="w3-dropdown-content w3-bar-block w3-card">
+          <a href="food.html" class="w3-bar-item w3-button">French Foods</a>
+          <a href="recipe.html" class="w3-bar-item w3-button">Recipe</a>
+        </div>
+      </div>
+      <a href="places.html" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black">Attraction</a>
+      <a href="hotels.html" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black">Hotel</a>
+      <a href="info.html" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black">More Info</a>
+  </div>
+
+    <div id="weather1">
+      <h1>France Weather Info</h1>
+      <label for="city">Enter City Name:</label>
+      <input type="text" id="city" name="city">
+
+      <button onclick="getWeather()">Get Weather</button>
+
+      <div id="weather-info"></div>
+    </div>
+
+    <div id="time">
+      <div id="time-info"></div>
+      <div id="season-info"></div>
+
+      <script>
+        function getCurrentTime() {
+          let date = new Date();
+          let hours = date.getHours();
+          let minutes = date.getMinutes();
+          let seconds = date.getSeconds();
+          let ampm = hours >= 12 ? 'PM' : 'AM';
+          hours = hours % 12;
+          hours = hours ? hours : 12;
+          minutes = minutes < 10 ? '0' + minutes : minutes;
+          seconds = seconds < 10 ? '0' + seconds : seconds;
+          let time = hours + ':' + minutes + ':' + seconds + ' ' + ampm;
+          return time;
+        }
+
+        function getCurrentSeason() {
+          let date = new Date();
+          let month = date.getMonth() + 1;
+          let season;
+          if (month >= 3 && month <= 5) {
+            season = "Spring";
+          } else if (month >= 6 && month <= 8) {
+            season = "Summer";
+          } else if (month >= 9 && month <= 11) {
+            season = "Fall";
+          } else {
+            season = "Winter";
+          }
+          return season;
+        }
+
+        let timeInfo = document.getElementById("time-info");
+        let seasonInfo = document.getElementById("season-info");
+
+        setInterval(function() {
+          let time = getCurrentTime();
+          let season = getCurrentSeason();
+          timeInfo.innerHTML = "<p>Current time: " + time + "</p>";
+          seasonInfo.innerHTML = "<p>Current season: " + season + "</p>";
+        }, 1000);
+      </script>
+    </div>
+    
+    <div id="currency">
+      <h1>The currency in France(EURO) </h1>
+      <p>1 MYR : 0.21</p>
+      <p>100 MYR : 20.95</p>
+      <p>1000 MYR : 209.524</p>
+    </div>
+  </body>
+</html>
